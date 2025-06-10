@@ -660,3 +660,4 @@
 ];
 
 export default products;
+console.log("hello");
