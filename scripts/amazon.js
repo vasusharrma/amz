@@ -1,5 +1,3 @@
-import products from "../data/products.js";
-
 const productGridElement = document.querySelector(".products-grid");
 
 function renderProducts() {
@@ -50,7 +48,9 @@ function renderProducts() {
           </div>
 
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button js-add-to-cart button-primary" data-product-id = "${
+            e.id
+          }">
             Add to Cart
           </button>
     </div> 
@@ -58,5 +58,28 @@ function renderProducts() {
   });
 
   productGridElement.innerHTML = html;
+
+  document.querySelectorAll(".js-add-to-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+      const productId = button.dataset.productId;
+      let matchedItem;
+      cart.forEach((e) => {
+        if (productId === e.productId) {
+          matchedItem = e;
+        }
+      });
+
+      if (matchedItem) {
+        matchedItem.quantity++;
+      } else {
+        cart.push({
+          productId,
+          quantity: 1,
+        });
+      }
+
+      console.log(cart)
+    });
+  });
 }
 renderProducts();
