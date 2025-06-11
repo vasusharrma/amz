@@ -469,4 +469,26 @@ const products = [
     priceCents: 2400,
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
+  {
+    id: "randomid1kdiesd",
+    image: "images/products/backpack.jpg",
+    name: "American Tourister College Backpack ",
+    rating: {
+      stars: 4.5,
+      count: 123,
+    },
+    priceCents: 1880,
+    keywords: ["travel", "backpack", "school", "mens"],
+  },
+  {
+    id: "randoms2dksie3",
+    image: "images/products/umbrella.jpg",
+    name: "Portable Auto Travel Ambrella",
+    rating: {
+      stars: 4,
+      count: 34,
+    },
+    priceCents: 798,
+    keywords: ["travel", "rain", "portable", "umbrella"],
+  },
 ];
