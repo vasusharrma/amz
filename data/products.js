@@ -492,3 +492,5 @@ const products = [
     keywords: ["travel", "rain", "portable", "umbrella"],
   },
 ];
+
+export {products};
